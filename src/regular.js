@@ -19,7 +19,7 @@ export function regular() {
 
                 counter++;
                 counterEl.style.display = "block";
-                counterEl.textContent = `Try: ${counter}`;
+                counterEl.textContent = `Guess Count: ${counter}`;
 
                 if (userGuess == computerGuess) {
                     message.textContent = `You guess it!`;
