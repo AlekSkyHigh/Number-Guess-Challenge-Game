@@ -1,4 +1,17 @@
-.container {
+.difficulty {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.simpleMain {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.regularMain {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -7,11 +20,13 @@
 h1 {
     font-size: 3rem;
     margin-top: 2rem;
+    /* color: #FFA351FF; */
 }
 
 p {
     font-size: 1.5rem;
     margin-top: 1.5rem;
+    /* color: #FFA351FF */
 }
 
 input[type="number"] {
@@ -25,9 +40,9 @@ button {
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
-    background-color: #007bff;
+    background-color: chocolate;
     color: #fff;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -35,8 +50,67 @@ button {
 #message {
     font-size: 1.5rem;
     margin-top: 1.5rem;
+    /* color: #FFA351FF; */
+}
+
+.low {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    /* color: orange; */
+    font-weight: bold;
+}
+
+.high {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    /* color: blue; */
+    font-weight: bold;
+}
+
+#counter {
+    /* color: black; */
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+#regularCounter {
+    /* color: black; */
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 body {
     background-color: darkkhaki;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: chocolate;
+    color: black;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1.5rem;
+}
+
+#footer>small>a>i {
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+}
+
+#failed {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 4.5rem;
+}
+
+#failed p {
+    font-size: 4.5rem;
+    color: red;
+    margin-top: 7.5rem;
+    font-weight: bold;
 }

@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c70a747c2b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" type="module"></script>
     <title>Number-Guess-Challenge-Game</title>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Guess a Number Game</h1>
+    <div class="difficulty" id="difficulty">
+        <h1>Number Guess Challenge</h1>
+        <p>Choose a difficulty:</p>
+        <button id="simpleBtn">Simple</button>
+        <button id="regularBtn">Regular</button>
+        <p>Simple: Unlimited tries in range between 1 and 100.</p>
+        <p>Regular: Limited tries in a range between 1 and 150.</p>
+    </div>
+
+    <div class="simpleMain" id="simpleMain" style="display: none;">
+        <h1>Number Guess Challenge</h1>
         <p>Guess a number between 1 and 100.</p>
         <input type="number" id="guessInput">
         <button id="guessButton">Guess</button>
         <div id="message"></div>
-      </div>
+        <div id="counter" style="display: none;"></div>
+    </div>
+
+    <div class="regularMain" id="regularMain" style="display: none;">
+        <h1>Number Guess Challenge</h1>
+        <p>Guess a number between 1 and 150.</p>
+        <input type="number" id="regularGuessInput">
+        <button id="regularGuessButton">Guess</button>
+        <div id="regularMessage"></div>
+        <div id="regularCounter" style="display: none;"></div>
+    </div>
+
+    <div class="failed" id="failed" style="display: none;">
+        <h1>Number Guess Challenge</h1>
+        <p>You have failed!</p>
+        <button id="tryAgain">Try Again</button>
+    </div>
+
+    <footer>
+        <div id="footer" class="text-end col-md-6 px-3">
+            <small class="text-light">&copy; Developed by Aleksandar Voynov
+                <a target="_blank" href="https://www.linkedin.com/in/aleksandar-voynov-94371919a/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href="https://github.com/AlekSkyHigh"><i class="fa-brands fa-github"></i></a></small>
+
+        </div>
+    </footer>
 </body>
+
 </html>
