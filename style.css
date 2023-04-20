@@ -16,7 +16,7 @@
 }
 
 #simpleBackBtn {
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .regularMain {
@@ -26,7 +26,7 @@
 }
 
 #regularBackBtn {
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 
@@ -162,7 +162,7 @@ footer {
 #failed p {
     font-size: 4.5rem;
     color: red;
-    margin-top: 7.5rem;
+    margin-top: 5.5rem;
     font-weight: bold;
     background-color: black;
     border-radius: 10px;
