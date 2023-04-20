@@ -29,6 +29,7 @@ export function simple() {
                 const winner = document.getElementById('winner');
                 winner.textContent = `You're the winner!`;
                 winner.style.display = "block";
+                guessBtn.disabled = true;
 
             } else if (userGuess < computerGuess) {
                 feedback.textContent = `The number is higher \u2B06 than ${userGuess}, keep guessing!`;

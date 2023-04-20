@@ -31,6 +31,7 @@ export function regular() {
                     const winner = document.getElementById('regularWinner');
                     winner.textContent = `You're the winner!`;
                     winner.style.display = "block";
+                    guessBtn.disabled = true;
 
                 } else if (userGuess < computerGuess) {
                     feedback.textContent = `The number is higher \u2B06 than ${userGuess}, keep guessing!`;
