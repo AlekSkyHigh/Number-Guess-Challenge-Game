@@ -49,6 +49,9 @@ export function regular() {
             }
 
         } else {
+            const magicNumber = document.getElementById('magicNumber');
+            magicNumber.textContent = `The magic number is ${computerGuess}.`;
+
             const regularMain = document.getElementById('regularMain');
             const failedScreen = document.getElementById('failed');
             regularMain.style.display = "none";

@@ -168,7 +168,7 @@ footer {
     margin-top: 0.5rem;
 }
 
-#failed p {
+#failedMessage {
     font-size: 4.5rem;
     color: red;
     margin-top: 2.5rem;
@@ -178,6 +178,12 @@ footer {
     padding: 5px;
 }
 
-#tryAgain{
+#magicNumber {
+    font-size: 1.5rem;
+    color: black;
     margin-top: -3rem;
+}
+
+#tryAgain{
+    color: black;
 }
