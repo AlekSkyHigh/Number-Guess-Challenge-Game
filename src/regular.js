@@ -18,7 +18,7 @@ export function regular() {
 
         let userGuess = parseInt(guessInput.value);
 
-        if (counter < 4) {
+        if (counter < 5) {
 
             if (userGuess <= 150 && userGuess > 0) {
 
@@ -59,6 +59,7 @@ export function regular() {
             failedScreen.style.display = "block";
 
             document.getElementById('tryAgain').addEventListener('click', () => {
+                computerGuess = Math.floor(Math.random() * 150);
 
                 regularMain.style.display = "block";
                 failedScreen.style.display = "none";
