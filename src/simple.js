@@ -27,7 +27,7 @@ export function simple() {
             if (userGuess == computerGuess) {
                 feedback.style.display = "none";
                 const winner = document.getElementById('winner');
-                winner.textContent = `You're the winner! Congrats!`;
+                winner.textContent = `You're the winner!`;
                 winner.style.display = "block";
 
             } else if (userGuess < computerGuess) {

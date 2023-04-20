@@ -29,7 +29,7 @@ export function regular() {
                 if (userGuess == computerGuess) {
                     feedback.style.display = "none";
                     const winner = document.getElementById('regularWinner');
-                    winner.textContent = `You're the winner! Congrats!`;
+                    winner.textContent = `You're the winner!`;
                     winner.style.display = "block";
 
                 } else if (userGuess < computerGuess) {
