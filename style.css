@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-#difficulty p{
+#difficulty p {
     margin-top: 3rem;
 }
 
@@ -16,7 +16,7 @@
 }
 
 #simpleBackBtn {
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .regularMain {
@@ -26,7 +26,7 @@
 }
 
 #regularBackBtn {
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 
@@ -60,10 +60,27 @@ button {
     cursor: pointer;
 }
 
-#message {
-    font-size: 1.5rem;
+#feedback {
     margin-top: 1.5rem;
     /* color: #FFA351FF; */
+}
+
+#winner {
+    font-size: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: chocolate;
+    margin-top: 2rem;
+}
+
+#regularWinner {
+    font-size: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: chocolate;
+    margin-top: 2rem;
 }
 
 .low {
@@ -79,6 +96,27 @@ button {
     /* color: blue; */
     font-weight: bold;
 }
+
+.invalid {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 1.5rem;
+
+}
+
+/* .regularInvalid {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 1.5rem;
+} */
 
 #counter {
     /* color: black; */

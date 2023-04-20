@@ -2,7 +2,7 @@ export function simple() {
 
     const guessInput = document.getElementById('guessInput');
     const guessBtn = document.getElementById('guessButton');
-    const message = document.getElementById('message');
+    const feedback = document.getElementById('feedback');
     const counterEl = document.getElementById('counter');
     let counter = 0;
 
@@ -25,21 +25,25 @@ export function simple() {
             counterEl.textContent = `Guess Count: ${counter}`;
 
             if (userGuess == computerGuess) {
-                message.textContent = `You guess it!`;
+                feedback.style.display = "none";
+                const winner = document.getElementById('winner');
+                winner.textContent = `You're the winner! Congrats!`;
+                winner.style.display = "block";
 
             } else if (userGuess < computerGuess) {
-                message.textContent = `The number is higher \u2B06 than ${userGuess}, keep guessing!`;
-                message.className = 'low';
+                feedback.textContent = `The number is higher \u2B06 than ${userGuess}, keep guessing!`;
+                feedback.className = 'low';
                 guessInput.value = '';
 
             } else if (userGuess > computerGuess) {
-                message.textContent = `The number is lower \u2B07 than ${userGuess}, keep guessing!`;
-                message.className = 'high'
+                feedback.textContent = `The number is lower \u2B07 than ${userGuess}, keep guessing!`;
+                feedback.className = 'high'
                 guessInput.value = '';
             }
 
         } else {
-            message.textContent = `Invalid input! Try again...`;
+            feedback.textContent = `\u2717 Invalid input! Try again...`;
+            feedback.className = 'invalid'
         }
     })
 
