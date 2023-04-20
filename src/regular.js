@@ -6,6 +6,11 @@ export function regular() {
     const counterEl = document.getElementById('regularCounter');
     let counter = 0;
 
+    const regularBackBtn = document.getElementById('regularBackBtn');
+    regularBackBtn.addEventListener('click', () => {
+        location.reload()
+    })
+
     let computerGuess = Math.floor(Math.random() * 150);
 
     guessBtn.addEventListener('click', (event) => {
@@ -25,12 +30,12 @@ export function regular() {
                     message.textContent = `You guess it!`;
 
                 } else if (userGuess < computerGuess) {
-                    message.textContent = `${userGuess} is Too Low!`;
+                    message.textContent = `The number is higher \u2B06 than ${userGuess}, keep guessing!`;
                     message.className = 'low';
                     guessInput.value = '';
 
                 } else if (userGuess > computerGuess) {
-                    message.textContent = `${userGuess} is Too High!`;
+                    message.textContent = `The number is lower \u2B07 than ${userGuess}, keep guessing!`;
                     message.className = 'high'
                     guessInput.value = '';
                 }

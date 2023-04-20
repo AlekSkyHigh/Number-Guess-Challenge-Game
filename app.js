@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
     simpleBtn.addEventListener('click', () => {
         difficultyScreen.style.display = "none";
         simpleMain.style.display = "block";
-        simple()
+        simple();
     })
 
     regularBtn.addEventListener('click', () => {
         difficultyScreen.style.display = "none";
         regularMain.style.display = "block";
-        regular()
+        regular();
     })
 
 })
