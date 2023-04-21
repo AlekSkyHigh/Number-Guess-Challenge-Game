@@ -40,8 +40,31 @@ export function regular() {
 
                 } else if (userGuess > computerGuess) {
                     feedback.textContent = `The number is lower \u2B07 than ${userGuess}, keep guessing!`;
-                    feedback.className = 'high'
+                    feedback.className = 'high';
                     guessInput.value = '';
+                }
+
+                if (counter == 5 && userGuess !== computerGuess) {
+
+                    const magicNumber = document.getElementById('magicNumber');
+                    magicNumber.textContent = `The magic number is ${computerGuess}.`;
+
+                    const regularMain = document.getElementById('regularMain');
+                    const failedScreen = document.getElementById('failed');
+                    regularMain.style.display = "none";
+                    failedScreen.style.display = "block";
+
+                    document.getElementById('tryAgain').addEventListener('click', () => {
+                        computerGuess = Math.floor(Math.random() * 150);
+
+                        regularMain.style.display = "block";
+                        failedScreen.style.display = "none";
+
+                        counter = 0;
+                        counterEl.textContent = "";
+                        feedback.textContent = "";
+                        guessInput.value = "";
+                    })
                 }
 
             } else {
@@ -49,28 +72,7 @@ export function regular() {
                 feedback.className = 'invalid'
             }
 
-        } else {
-            const magicNumber = document.getElementById('magicNumber');
-            magicNumber.textContent = `The magic number is ${computerGuess}.`;
-
-            const regularMain = document.getElementById('regularMain');
-            const failedScreen = document.getElementById('failed');
-            regularMain.style.display = "none";
-            failedScreen.style.display = "block";
-
-            document.getElementById('tryAgain').addEventListener('click', () => {
-                computerGuess = Math.floor(Math.random() * 150);
-
-                regularMain.style.display = "block";
-                failedScreen.style.display = "none";
-
-                counter = 0;
-                counterEl.textContent = "";
-                feedback.textContent = "";
-                guessInput.value = "";
-            })
         }
-
 
     })
 
