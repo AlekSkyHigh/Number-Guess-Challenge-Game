@@ -11,8 +11,7 @@ export function regular() {
         location.reload()
     })
 
-    // let computerGuess = Math.floor(Math.random() * 150);
-    let computerGuess = 11
+    let computerGuess = Math.floor(Math.random() * 150);
 
     guessBtn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -37,7 +36,7 @@ export function regular() {
                     const playAgainBtn = document.getElementById('regularPlayAgainBtn');
                     playAgainBtn.style.display = "inline-block";
                     playAgainBtn.addEventListener('click', () => {
-                        computerGuess = Math.floor(Math.random() * 100);
+                        computerGuess = Math.floor(Math.random() * 150);
                         winner.style.display = "none";
                         playAgainBtn.style.display = "none";
                         feedback.style.display = "block";
