@@ -30,6 +30,21 @@ export function simple() {
                 winner.textContent = `You're the winner!`;
                 winner.style.display = "block";
                 guessBtn.disabled = true;
+                
+                const playAgainBtn = document.getElementById('simplePlayAgainBtn');
+                playAgainBtn.style.display = "inline-block";
+                playAgainBtn.addEventListener('click', () => {
+                    computerGuess = Math.floor(Math.random() * 100);
+                    winner.style.display = "none";
+                    playAgainBtn.style.display = "none";
+                    feedback.style.display = "block";
+                    guessBtn.disabled = false
+
+                    counter = 0;
+                    counterEl.textContent = "";
+                    feedback.textContent = "";
+                    guessInput.value = "";
+                })
 
             } else if (userGuess < computerGuess) {
                 feedback.textContent = `The number is higher \u2B06 than ${userGuess}, keep guessing!`;
